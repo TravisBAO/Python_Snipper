@@ -1,0 +1,29 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        map = {
+            "(" : ")",
+            "[" : "]",
+            "{" : "}"
+        }
+
+        for char in s:
+            if char in map:
+                stack.append(char)
+            else:
+                if len(stack) != 0:
+                    temp = stack.pop()
+                    if map[temp] == char:
+                        continue
+                    else:
+                        return False
+                else:
+                    return False
+        return len(stack) == 0
+            
+
+if __name__ == '__main__':
+    myS = Solution()
+    testString = "{[[]}"
+    print(myS.isValid(testString))
+
