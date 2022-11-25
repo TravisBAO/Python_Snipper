@@ -1,5 +1,5 @@
 # Structure: (level, upgrade required power points, upgrade required Coins
-HERO_UPGRADE_REQUIRED = [
+HERO_POWER_LEVEL_UPGRADE_REQUIRED = [
     (0, 0, 0),
     (1, 20, 20),
     (2, 30, 35),
@@ -11,6 +11,16 @@ HERO_UPGRADE_REQUIRED = [
     (8, 550, 1250),
     (9, 890, 1875),
     (10, 1440, 2800)
+]
+HERO_RANKs = [
+    (20, 500),
+    (21, 550),
+    (22, 600),
+    (23, 650),
+    (24, 700),
+    (25, 750),
+    (26, 800),
+    (27, 850),
 ]
 
 HERO_TYPE = ("STARTING BRAWLER", "TROPHY ROAD REWARD", "RARE", "SUPER RARE", "EPIC", "MYTHIC", "LEGENDARY", "CHROMATIC")
@@ -34,7 +44,7 @@ TRAVIS_HERO_LIST = [
     ('BELLE', 619, 11, 0, 23, 'CHROMATIC'),
     ('COLETTE', 608, 9, 975, 22),
     ('AMBER', 603, 9, 423, 22),
-    ('RUFFS', 601, 9, 1087),
+    ('RUFFS', 601, 9, 1087,22),
     ('JESSIE', 601, 9, 993, 22),
     ('NITA', 599, 9, 1116, 22),
     ('MR.P', 599, 9, 687, 22),
