@@ -14,7 +14,7 @@ def import_data_to_csv():
         writer.writerows(TRAVIS_HERO_LIST)
 
 
-def brawl_stars():
+def scatter_chart_by_trophies():
     df = pandas.read_csv('BrawlStars.csv')
     fig = px.scatter(df, x="Power Level", y="Trophies", title="Hero's Trophies",
                      hover_data=['Name', 'Rank'], color="Rank", size="Rank")
@@ -23,5 +23,5 @@ def brawl_stars():
 
 if __name__ == "__main__":
     import_data_to_csv()
-    brawl_stars()
+    scatter_chart_by_trophies()
 
