@@ -4,14 +4,14 @@ import plotly.express as px
 from BrawlStars.BrawlStarData import import_data_to_csv
 
 
-def scatter_chart_by_trophies():
+def bar_chart_by_trophies():
     df = pandas.read_csv('BrawlStars.csv')
-    fig = px.scatter(df, x="Power Level", y="Trophies", title="Hero's Trophies",
-                     hover_data=['Name', 'Rank'], color="Rank", size="Rank")
+    fig = px.bar(df, x="Name", y="Trophies", title="Hero's Trophies",
+                 hover_data=['Rank'], color="Trophies")
     fig.show()
 
 
 if __name__ == "__main__":
     import_data_to_csv()
-    scatter_chart_by_trophies()
+    bar_chart_by_trophies()
 
