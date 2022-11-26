@@ -1,17 +1,7 @@
-import csv
-import os.path
 import pandas
 import plotly.express as px
-from BrawlStars.BrawlStarData import HERO_PARAS, TRAVIS_HERO_LIST
 
-
-def import_data_to_csv():
-    if os.path.exists("BrawlStars.csv"):
-        os.remove("BrawlStars.csv")
-    with open("BrawlStars.csv", "a") as BrawlStarsFile:
-        writer = csv.writer(BrawlStarsFile)
-        writer.writerow(HERO_PARAS)
-        writer.writerows(TRAVIS_HERO_LIST)
+from BrawlStars.BrawlStarData import import_data_to_csv
 
 
 def scatter_chart_by_trophies():

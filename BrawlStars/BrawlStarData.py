@@ -1,4 +1,8 @@
-# Structure: (level, upgrade required power points, upgrade required Coins
+import csv
+import os.path
+
+
+# Structure: (level, upgrade required power points, upgrade required Coins)
 HERO_POWER_LEVEL_UPGRADE_REQUIRED = [
     (0, 0, 0),
     (1, 20, 20),
@@ -12,6 +16,7 @@ HERO_POWER_LEVEL_UPGRADE_REQUIRED = [
     (9, 890, 1875),
     (10, 1440, 2800)
 ]
+# Structure: (rank, trophy required)
 HERO_RANKs = [
     (20, 500),
     (21, 550),
@@ -94,3 +99,12 @@ TRAVIS_HERO_LIST = [
 ]
 # {"name" : "string", "required power points": uint, "required coins" : uint}
 TRAVIS_HERO_FINAL = []
+
+
+def import_data_to_csv():
+    if os.path.exists("BrawlStars.csv"):
+        os.remove("BrawlStars.csv")
+    with open("BrawlStars.csv", "a") as BrawlStarsFile:
+        writer = csv.writer(BrawlStarsFile)
+        writer.writerow(HERO_PARAS)
+        writer.writerows(TRAVIS_HERO_LIST)
