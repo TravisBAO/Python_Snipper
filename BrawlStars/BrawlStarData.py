@@ -31,8 +31,14 @@ HERO_RANKs = [
 HERO_RARITY = ("STARTING BRAWLER", "TROPHY ROAD REWARD", "RARE", "SUPER RARE",
                "EPIC", "MYTHIC", "LEGENDARY", "CHROMATIC")
 HERO_CLASS = ("DAMAGE DEALER", "TANK", "HYBRID", "ASSASSIN", "SUPPORT")
-HERO_PARAS = ("Name", "Trophies", "Power Level", "Power Points", "Rank", "Hero Rarity", "Hero Class", "Gadget",
-              "Star Power", "Gear")
+HERO_PARAS = ("Name",
+              "Trophies",
+              "Power Level",
+              "Power Points",
+              "Rank",
+              "Hero Rarity",
+              "Hero Class",
+              "Gadget", "Star Power", "Gear")
 
 # hero list is a list of data type "HERO_PARAS"
 TRAVIS_HERO_LIST = [
