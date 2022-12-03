@@ -1,14 +1,14 @@
 import pandas
 import plotly.express as px
 
-from BrawlStars.BrawlStarData import import_data_to_csv
+from BrawlStars.Datas.BrawlStarData import import_data_to_csv
 
 
 def bar_chart_by_trophies():
     df = pandas.read_csv('BrawlStars.csv')
     fig = px.bar(df, x="Name", y="Trophies", title="Hero's Trophies",
                  hover_data=['Rank'], color="Trophies")
-    # fig.show() # for debug
+    fig.show()  # for debug
     return fig
 
 
@@ -53,13 +53,14 @@ def charts_collection():
 
 
 if __name__ == "__main__":
-    import_data_to_csv()
+    # import_data_to_csv()
+    import_data_to_csv("brawlstars", "hero_historical_data")
 
-    # bar_chart_by_trophies()
+    bar_chart_by_trophies()
     # bar_chart_by_hero_parity()
     # bar_chart_by_hero_class()
     # histogram_chart_by_hero_class()
     # histogram_chart_by_hero_parity()
 
-    charts_collection()
+    # charts_collection()
 
