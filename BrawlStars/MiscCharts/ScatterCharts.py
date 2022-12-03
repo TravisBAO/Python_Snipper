@@ -1,7 +1,7 @@
 import pandas
 import plotly.express as px
 
-from BrawlStars.BrawlStarData import import_data_to_csv
+from BrawlStars.Datas.BrawlStarData import import_data_to_csv
 
 
 def scatter_chart_by_trophies():

@@ -1,4 +1,4 @@
-from BrawlStarData import *
+from BrawlStars.Datas.BrawlStarData import *
 from BrawlStars.Utils import sort_ascending, sort_descending
 
 
