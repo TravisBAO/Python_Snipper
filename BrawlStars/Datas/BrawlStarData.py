@@ -1,4 +1,3 @@
-
 # database tables
 db_table_TRAVIS_HERO_LIST = ("Name", "Hero_Rarity", "Hero_Class")
 db_table_hero_historical_data = ("Name", "Trophies", "Power_Level", "Power_Points", "Ranks", "Date")
