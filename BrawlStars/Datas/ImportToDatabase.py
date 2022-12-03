@@ -1,9 +1,7 @@
-import csv
-import os.path
 import mysql.connector
 
 from datetime import datetime
-from BrawlStars.Datas.BrawlStarData import TRAVIS_HERO_LIST
+from BrawlStars.Datas.BrawlStarData import TRAVIS_HERO_LIST, db_table_TRAVIS_HERO_LIST, db_table_hero_historical_data
 
 
 def connect_to_database(database):
