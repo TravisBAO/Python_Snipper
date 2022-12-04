@@ -16,3 +16,12 @@ def histogram_chart_by_hero_class():
                        barmode='group', color="Trophies", histfunc='max')
     # fig.show() # for debug
     return fig
+
+
+def histogram_chart_by_hero_trophy():
+    df = pandas.read_csv('BrawlStars.csv')
+    fig = px.histogram(df, x="Trophies", y="Trophies", title="Hero by trophy",
+                       barmode='group', color="Trophies", histfunc='count')
+    fig.show()
+    return fig
+
