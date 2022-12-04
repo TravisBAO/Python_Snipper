@@ -54,3 +54,7 @@ def update_data_to_database(database, table):
         val = (each_hero[0],)
         mycursor.execute(sql, val)
         mydb.commit()
+
+
+if __name__ == "__main__":
+    insert_data_to_database("brawlstars", "hero_historical_data")
