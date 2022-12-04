@@ -1,4 +1,4 @@
-from BrawlStarData import *
+from BrawlStars.Datas.BrawlStarData import TRAVIS_HERO_LIST, TRAVIS_HERO_FINAL, HERO_POWER_LEVEL_UPGRADE_REQUIRED
 
 
 def required_power_points(hero_list, final_hero_list):
