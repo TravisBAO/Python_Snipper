@@ -18,7 +18,7 @@ HERO_POWER_LEVEL_UPGRADE_REQUIRED = [
     (10, 1440, 2800)
 ]
 # Structure: (rank, trophy required)
-HERO_RANKs = [
+HERO_RANKS = [
     (20, 500),
     (21, 550),
     (22, 600),
@@ -27,6 +27,7 @@ HERO_RANKs = [
     (25, 750),
     (26, 800),
     (27, 850),
+    (28, 900)
 ]
 
 HERO_RARITY = ("STARTING BRAWLER", "TROPHY ROAD REWARD", "RARE", "SUPER RARE",

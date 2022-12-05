@@ -1,4 +1,4 @@
-from BrawlStars.Datas.BrawlStarData import HERO_RANKs, TRAVIS_HERO_LIST
+from BrawlStars.Datas.BrawlStarData import HERO_RANKS, TRAVIS_HERO_LIST
 
 
 def up_to_level(level=20):
@@ -10,7 +10,7 @@ def up_to_level(level=20):
     trophies_increment = 0
     final_trophies_with_required_level = 0
     current_total_trophies = 0
-    for each_level in HERO_RANKs:
+    for each_level in HERO_RANKS:
         if level == each_level[0]:
             level_trophy = each_level[1]
             break
@@ -100,7 +100,35 @@ def season_end_decrement():
     return trophy_decrement
 
 
+def to_reach_current_rank():
+    trophy_increment = 0
+    current_total_trophy = 0
+    for each_star in TRAVIS_HERO_LIST:
+        # each_star[0]: Name, each_star[1]: trophy, each_star[4]: rank
+        hero_increment = 0
+        current_total_trophy += each_star[1]
+        for each_rank in HERO_RANKS:
+            if each_star[4] == each_rank[0]:
+                if each_star[1] < each_rank[1]:
+                    hero_increment = each_rank[1] - each_star[1]
+                    trophy_increment += hero_increment
+
+                    print("-----------------------------------------")
+                    print(each_star[0] + " current trophy is " + str(each_star[1]))
+                    print(each_star[0] + " maximal trophy is " + str(each_rank[1]))
+                else:
+                    pass
+            else:
+                pass
+    print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+    print("Current total trophy is " + str(current_total_trophy))
+    print("Total trophy will increase " + str(trophy_increment)
+          + " and reach " + str(current_total_trophy + trophy_increment))
+    return trophy_increment
+
+
 if __name__ == "__main__":
     # up_to_level(21)
     # up_to_trophies(550)
-    season_end_decrement()
+    # season_end_decrement()
+    to_reach_current_rank()
