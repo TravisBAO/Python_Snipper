@@ -7,14 +7,14 @@ from BrawlStars.MiscCharts.LineCharts import line_chart_by_name
 
 if __name__ == "__main__":
     # bar chart, trophies
-    chart_data = fetch_data_from_database("brawlstars", sql_bar_trophies)
-    import_data_to_csv(bar_chart_trophies, chart_data)
-    # charts_collection()
-    BrawlStars.MiscCharts.HistogramCharts.histogram_chart_by_hero_trophy()
+    # chart_data = fetch_data_from_database("brawlstars", sql_bar_trophies)
+    # import_data_to_csv(bar_chart_trophies, chart_data)
+    # # charts_collection()
+    # BrawlStars.MiscCharts.HistogramCharts.histogram_chart_by_hero_trophy()
 
     # line chart, name
-    # chart_data = fetch_data_from_database("brawlstars", sql_line_name)
-    # import_data_to_csv(line_chart_name, chart_data)
-    # line_chart_by_name()
+    chart_data = fetch_data_from_database("brawlstars", sql_line_name)
+    import_data_to_csv(line_chart_name, chart_data)
+    line_chart_by_name()
 
 
