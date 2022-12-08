@@ -23,7 +23,9 @@ def bubble_sort(list_under_test):
     print("length of the list under test is " + str(list_length) + "\n")
     print(str(list_under_test) + "\n")
 
-    for i in range(list_length - 1): #  这个for 决定列表中有哪些元素可以参与对比，随着循环的进行，参加对比的元素列表越来越短，体现在下一行的 "listlength-1-i".也要注意i本身不参与值对比的计算
+    for i in range(list_length - 1):
+        # 上面这个for 决定列表中有哪些元素可以参与对比，随着循环的进行，参加对比的元素列表越来越短，
+        # 体现在下一行的 "list_length-1-i".也要注意i本身不参与值对比的计算
         for j in range(list_length - 1 - i):
             if list_under_test[j] > list_under_test[j + 1]:
                 temp = list_under_test[j + 1]
