@@ -12,7 +12,7 @@ def required_power_points(hero_list, final_hero_list):
                 pass
         actual_required = hero_required - hero[3]  # hero[3] is current power points
         total_required += actual_required
-        print(hero[0] + " still required power points ---> " + str(actual_required))
+        print(hero[0] + " still requires power points ---> " + str(actual_required))
         # hero_temp = {"name": hero[0], "required power points": actual_required}
         # final_hero_list.append(hero_temp)
         final_hero_list.append({"Name": hero[0], "requires power points": actual_required})
