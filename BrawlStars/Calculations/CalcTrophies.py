@@ -116,6 +116,7 @@ def to_reach_current_rank():
                     print("-----------------------------------------")
                     print(each_star[0] + " current trophy is " + str(each_star[1]))
                     print(each_star[0] + " maximal trophy is " + str(each_rank[1]))
+                    print("He/She will increase trophies " + str(each_rank[1] - each_star[1]))
                 else:
                     pass
             else:
@@ -130,5 +131,5 @@ def to_reach_current_rank():
 if __name__ == "__main__":
     # up_to_level(21)
     # up_to_trophies(550)
-    # season_end_decrement()
-    to_reach_current_rank()
+    season_end_decrement()
+    # to_reach_current_rank()

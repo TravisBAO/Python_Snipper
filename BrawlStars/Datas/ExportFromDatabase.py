@@ -18,6 +18,12 @@ sql_line_name = "SELECT Name, Trophies, Date "\
 
 
 def fetch_data_from_database(database, sql_query):
+    """
+    collect data form database
+    @param database:
+    @param sql_query:
+    @return:
+    """
     mydb = connect_to_database(database)
     mycursor = mydb.cursor()
     mycursor.execute(sql_query)
