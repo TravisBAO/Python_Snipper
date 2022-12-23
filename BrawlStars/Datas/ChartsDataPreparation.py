@@ -6,6 +6,12 @@ from BrawlStars.Datas.ExportFromDatabase import fetch_data_from_database
 
 
 def import_data_to_csv(csv_head, csv_data):
+    """
+    To collect data to format csv, which is required for package plotly
+    @param csv_head:
+    @param csv_data:
+    @return:
+    """
     if os.path.exists("BrawlStars.csv"):
         os.remove("BrawlStars.csv")
     with open("BrawlStars.csv", "a") as BrawlStarsFile:
