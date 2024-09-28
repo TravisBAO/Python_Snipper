@@ -1,12 +1,13 @@
-
+import sys
 
 def factorial(total, drawing, ticket):
-    try:
-        total >= drawing
-    except:
+    # 如果输入数据不能满足最基本的条件，就直接中止退出
+    if total < drawing:
         print("total should be greater or equal to drawing")
+        sys.exit()
+
     odds = 1
-    for i in range(1, drawing + 1 ):
+    for i in range(1, drawing + 1):
         odds = round(odds * (total - i + 1) / (drawing - i + 1))
     odds = round(odds / ticket)
     print("--------------")
@@ -21,7 +22,7 @@ def factorial(total, drawing, ticket):
     print(f"official_odds equal to", official_odds)
 
 if __name__ == "__main__":
-    total = 50
+    total = 5
     drawing = 7
     ticket = 3
     factorial(total,drawing, ticket)
